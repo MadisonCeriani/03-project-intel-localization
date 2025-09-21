@@ -1,0 +1,124 @@
+/*Add your CSS here */
+/* Make all images inside the timeline cards the same width and height */
+/* Use object-fit: contain so the whole image is visible (not cropped) */
+body {
+  font-family: Arial, sans-serif;
+   * Use a clean, modern font */
+  margin: 0;
+  padding: 0;
+  background-color: #d2dcdf; /* Light background color for the page */
+  color: #333;
+  font-size: 20x; /* Dark text color for readability */
+}
+h1 {
+  text-align: center;
+  font-size: 2.1em; /* Center the main heading */
+}
+section div img {
+  width: 90%;           /* Make image take up most of the card width */
+  height: 140px;        /* Reduce height for a more compact look */
+  object-fit: contain;  /* Show the whole image, even if there are borders */
+  display: block;       /* Remove extra space below images */
+  margin: 0 auto;       /* Center the images */
+  background: #fffcfc;     /* White background for images with transparency */
+  border: 1px solid #c1c0c0; /* Light border for visibility */
+}
+
+/* Display timeline cards in a horizontal scroll on large screens */
+section {
+  display: flex;              /* Arrange cards in a row */
+  flex-direction: row;        /* Horizontal layout */
+  overflow-x: auto;           /* Enable horizontal scrolling if needed */
+  flex-wrap: nowrap;          /* Prevent wrapping to next line */
+  justify-content: flex-start;/* Align cards to the left */
+  gap: 20px;                  /* Space between cards */
+  padding: 20px 0;            /* Space above and below */
+  scroll-behavior: smooth;    /* Smooth scrolling */
+}
+
+/* Each card stays the same width for horizontal scroll */
+section div {
+  background: #f9f9f9;        /* Light background for each card */
+  border: 1px solid #ddd;     /* Light border */
+  border-radius: 8px;         /* Rounded corners */
+  padding: 8px;               /* Reduced space inside each card */
+  min-width: 320px;           /* Prevent cards from shrinking too small */
+  width: 320px;               /* Fixed width for each card */
+  box-sizing: border-box;     /* Include padding and border in width */
+  text-align: center;         /* Center text and images */
+  position: relative;         /* Needed for absolute overlay */
+  transition: transform 0.2s; /* Smoothly animate scaling */
+}
+
+/* Enlarge the card slightly when hovered */
+section div:hover {
+  transform: scale(1.05); /* Make the card 5% bigger on hover */
+  z-index: 2;             /* Bring hovered card above others */
+}
+
+/* Stack cards vertically on small screens (like phones) */
+@media (max-width: 700px) {
+  section {
+    flex-direction: column;   /* Stack cards vertically */
+    overflow-x: visible;      /* No horizontal scroll needed */
+    align-items: center;      /* Center cards in the column */
+  }
+  section div {
+    width: 90%;               /* Make cards take most of the screen width */
+    min-width: 0;             /* Allow shrinking */
+    margin-bottom: 20px;      /* Space between cards */
+  }
+}
+
+/* Make the Intel logo in the header larger and center it */
+/* For beginners: This centers the logo image in its container */
+.header-logo {
+  width: 200px;      /* Set the logo width */
+  height: auto;      /* Keep the aspect ratio */
+  display: block;    /* Makes margin auto work for centering */
+  margin: 0 auto 16px auto;
+  ; /* Center horizontally and add space below */
+}
+
+/* Center the subheading (the paragraph under the main heading) */
+header p {
+  text-align: center; /* Center the text inside the paragraph */
+  margin: 0 auto;     /* Center the paragraph itself */
+  max-width: 600px;
+    /* Optional: limit the width for better readability */
+}
+
+/* Hide the card text by default and show it on hover */
+.card-hover-text {
+  position: absolute;              /* Position over the card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 197, 242, 0.95); /* Semi-transparent blue overlay */
+  color: #fff;                     /* White text */
+  display: flex;                   /* Center text vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;                      /* Hidden by default */
+  pointer-events: none;            /* Allow hover to reach parent */
+  transition: opacity 0.3s;        /* Smooth fade-in */
+  text-align: center;              /* Center text */
+  padding: 10px;                   /* Reduced padding for overlay text */
+  border-radius: 8px;              /* Match card corners */
+  font-size: 1em;
+  z-index: 1;
+}
+
+/* Show the overlay text when hovering over the card */
+section div:hover .card-hover-text {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Center the footer text and links */
+.footer {
+  text-align: center;    /* Center all text inside the footer */
+  margin: 30px auto 0 auto; /* Add space above and center horizontally */
+  font-size: 0.95em;     /* Slightly smaller text */
+}
