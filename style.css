@@ -56,6 +56,16 @@ section div:hover {
   z-index: 2;             /* Bring hovered card above others */
 }
 
+/* Enlarge Bootstrap cards and info card on hover for beginners */
+/* This class is used for the three info cards and the timeline info card */
+.hover-enlarge {
+  transition: transform 0.2s; /* Smoothly animate scaling */
+}
+.hover-enlarge:hover {
+  transform: scale(1.05);     /* Make the card 5% bigger on hover */
+  z-index: 2;                 /* Bring hovered card above others */
+}
+
 /* Stack cards vertically on small screens (like phones) */
 @media (max-width: 700px) {
   section {
