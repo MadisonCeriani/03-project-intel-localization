@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Enable Bootstrap RTL support for right-to-left layouts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -146,77 +148,78 @@
           next-generation sustainable semiconductor manufacturing.
         </p>
       </div>
+      
     </div>
   </section>
+
+  <!-- Info text centered and inside a Bootstrap card under timeline -->
+  <div class="container my-3">
+    <!-- Bootstrap card for simple styling -->
+    <div class="card">
+      <div class="card-body text-center small timeline-info-text">
+        <!-- This text helps users understand how to use the timeline -->
+        Scroll to view timeline | Hover over cards to learn more!
+      </div>
+    </div>
+  </div>
+
+  <!-- New Three-Column Section using Bootstrap Grid and Cards -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Each column contains a Bootstrap card for simple styling -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">RISE Strategy</h2>
+            <p class="card-text">
+              Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+              Intel sets ambitious 2030 goals, including driving industry-wide 
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Commitment</h2>
+            <p class="card-text">
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+              (Scope 1 and 2) by 2040. This commitment builds on decades of 
+              environmental initiatives and partnerships across the semiconductor 
+              industry.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Water &amp; Waste</h2>
+            <p class="card-text">
+              Intel conserves billions of gallons of water annually and 
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and 
+              advance a circular economy.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+      - Each topic is now inside its own Bootstrap card for clear separation.
+      - Cards are responsive and look good on all screen sizes.
+      - The h-100 class makes all cards the same height in a row.
+    -->
+  </div>
+
   <!-- Footer Section -->
   <section>
     <div class="footer">
-      <p>Scroll to view timeline | Hover over cards to learn more!</p>
-
-      
-        <!-- Closing HTML tag included as per request -->
-</html>
-      </p>
+      <p>&copy; 2023 Intel Corporation. All rights reserved.</p>
     </div>
-  </section>
-   <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+    <!-- Closing HTML tag included as per request -->
 
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
-
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
-  </section>
-</body>
-</html>
- 
-</body>
-</html>
-      </p>
-    </div>
-  </section>
-  
- 
-</body>
-</html>
