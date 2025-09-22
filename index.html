@@ -153,23 +153,27 @@
   </section>
 
   <!-- Info text centered and inside a Bootstrap card under timeline -->
-  <div class="container my-3">
-    <!-- Bootstrap card for simple styling -->
-    <div class="card hover-enlarge">
-      <div class="card-body text-center small timeline-info-text">
-        <!-- This text helps users understand how to use the timeline -->
-        Scroll to view timeline | Hover over cards to learn more!
-      </div>
-    </div>
+ 
+    <!--
+      - Each topic is now inside its own Bootstrap card for clear separation.
+      - Cards are responsive and look good on all screen sizes.
+      - The h-100 class makes all cards the same height in a row.
+    -->
   </div>
 
-  <!-- New Three-Column Section using Bootstrap Grid and Cards -->
+  <!-- Three-Column Section with Icons using Bootstrap Grid and Cards -->
   <div class="container my-5">
     <div class="row">
-      <!-- Each column contains a Bootstrap card for simple styling -->
+      <!-- RISE Strategy card with icon -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card h-100 hover-enlarge">
           <div class="card-body">
+            <!-- Bootstrap icon for strategy (lightbulb) -->
+            <div class="mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#3cc5f2" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                <path d="M2 6a6 6 0 1 1 12 0c0 2.577-1.7 4.387-3.093 5.682A1.993 1.993 0 0 1 11 14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1c0-.356.186-.672.474-.818C3.7 10.387 2 8.577 2 6zm6-5a5 5 0 0 0-5 5c0 2.21 1.463 3.978 2.708 5.093A.993.993 0 0 1 6 14h4a.993.993 0 0 1 .292-.707C12.537 14.978 14 13.21 14 11a5 5 0 0 0-5-5z"/>
+              </svg>
+            </div>
             <h2 class="card-title">RISE Strategy</h2>
             <p class="card-text">
               Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
@@ -180,9 +184,17 @@
           </div>
         </div>
       </div>
+      <!-- Commitment card with icon -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card h-100 hover-enlarge">
           <div class="card-body">
+            <!-- Bootstrap icon for commitment (check-circle) -->
+            <div class="mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#3cc5f2" class="bi bi-check-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                <path d="M10.97 5.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 9.384a.75.75 0 1 1 1.06-1.06l1.094 1.094 3.492-4.438a.75.75 0 0 1 1.06-.01z"/>
+              </svg>
+            </div>
             <h2 class="card-title">Commitment</h2>
             <p class="card-text">
               In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
@@ -194,9 +206,17 @@
           </div>
         </div>
       </div>
+      <!-- Water & Waste card with icon -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card h-100 hover-enlarge">
           <div class="card-body">
+            <!-- Bootstrap icon for water & waste (droplet) -->
+            <div class="mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#3cc5f2" class="bi bi-droplet" viewBox="0 0 16 16">
+                <path d="M8.5 1.5a.5.5 0 0 0-1 0v.634C4.5 4.5 2 7.5 2 10a6 6 0 0 0 12 0c0-2.5-2.5-5.5-5.5-7.866V1.5z"/>
+                <path d="M8 15a5 5 0 0 1-5-5c0-2.5 2.5-5.5 5-7.866C10.5 4.5 13 7.5 13 10a5 5 0 0 1-5 5z"/>
+              </svg>
+            </div>
             <h2 class="card-title">Water &amp; Waste</h2>
             <p class="card-text">
               Intel conserves billions of gallons of water annually and 
@@ -210,9 +230,33 @@
       </div>
     </div>
     <!--
-      - Each topic is now inside its own Bootstrap card for clear separation.
-      - Cards are responsive and look good on all screen sizes.
-      - The h-100 class makes all cards the same height in a row.
+      - Each card heading now has a simple SVG icon for visual enhancement.
+      - Icons use Bootstrap's recommended SVGs and match the color theme.
+      - This helps beginners see how to add icons to headings.
+    -->
+  </div>
+
+  <!-- Newsletter Subscription Form Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Subscribe to our Sustainability Newsletter!</h2>
+    <!-- Simple Bootstrap form for beginners -->
+    <form>
+      <div class="text-center mb-3">
+        <!-- Label for the email input -->
+        <label for="emailInput" class="form-label">Email address</label>
+        <!-- Email input field -->
+        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="name@example.com">
+        <!-- Help text under the input -->
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <!-- Subscribe button -->
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <!--
+      - The form uses Bootstrap classes for easy styling.
+      - The input type "email" checks for a valid email address.
+      - The button is styled with Bootstrap's primary color.
+      - All elements are grouped for beginner clarity.
     -->
   </div>
 
@@ -222,4 +266,3 @@
       <p>&copy; 2023 Intel Corporation. All rights reserved.</p>
     </div>
     <!-- Closing HTML tag included as per request -->
-
